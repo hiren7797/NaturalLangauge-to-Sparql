@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology "http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#"
+     xml:base="http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:untitled-ontology="http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#studies -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology;studies">
+        <rdfs:range rdf:resource="&untitled-ontology;Module"/>
+        <rdfs:domain rdf:resource="&untitled-ontology;Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#teaches -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology;teaches">
+        <rdfs:domain rdf:resource="&untitled-ontology;Lecturer"/>
+        <rdfs:range rdf:resource="&untitled-ontology;Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#emp_id -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology;emp_id">
+        <rdfs:domain rdf:resource="&untitled-ontology;Lecturer"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#first_name -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology;first_name">
+        <rdfs:domain rdf:resource="&untitled-ontology;Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#last_name -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology;last_name">
+        <rdfs:domain rdf:resource="&untitled-ontology;Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#student_id -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology;student_id">
+        <rdfs:domain rdf:resource="&untitled-ontology;Student"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#CSmodule -->
+
+    <owl:Class rdf:about="&untitled-ontology;CSmodule">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology;Module"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#Lecturer -->
+
+    <owl:Class rdf:about="&untitled-ontology;Lecturer">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#MathModule -->
+
+    <owl:Class rdf:about="&untitled-ontology;MathModule">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology;Module"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#Module -->
+
+    <owl:Class rdf:about="&untitled-ontology;Module"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#Person -->
+
+    <owl:Class rdf:about="&untitled-ontology;Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#Student -->
+
+    <owl:Class rdf:about="&untitled-ontology;Student">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#CS101 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology;CS101"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#CS103 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology;CS103"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#Lecturer1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology;Lecturer1">
+        <rdf:type rdf:resource="&untitled-ontology;Lecturer"/>
+        <emp_id rdf:datatype="&xsd;integer">1002</emp_id>
+        <first_name rdf:datatype="&xsd;string">Hariom</first_name>
+        <last_name rdf:datatype="&xsd;string">pandya</last_name>
+        <teaches rdf:resource="&untitled-ontology;CS101"/>
+        <teaches rdf:resource="&untitled-ontology;M201"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#Lecturer2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology;Lecturer2">
+        <rdf:type rdf:resource="&untitled-ontology;Lecturer"/>
+        <emp_id rdf:datatype="&xsd;integer">1005</emp_id>
+        <last_name rdf:datatype="&xsd;string">barad</last_name>
+        <first_name rdf:datatype="&xsd;string">hiren</first_name>
+        <teaches rdf:resource="&untitled-ontology;CS103"/>
+        <teaches rdf:resource="&untitled-ontology;M202"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#M201 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology;M201"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#M202 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology;M202"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#Student1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology;Student1">
+        <rdf:type rdf:resource="&untitled-ontology;Student"/>
+        <student_id rdf:datatype="&xsd;integer">50001</student_id>
+        <last_name rdf:datatype="&xsd;string">patel</last_name>
+        <first_name rdf:datatype="&xsd;string">pinak</first_name>
+        <studies rdf:resource="&untitled-ontology;CS101"/>
+        <studies rdf:resource="&untitled-ontology;M201"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2019/11/untitled-ontology#Student2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology;Student2">
+        <rdf:type rdf:resource="&untitled-ontology;Student"/>
+        <student_id rdf:datatype="&xsd;integer">5007</student_id>
+        <first_name rdf:datatype="&xsd;string">paresh</first_name>
+        <last_name rdf:datatype="&xsd;string">parmar</last_name>
+        <studies rdf:resource="&untitled-ontology;CS101"/>
+        <studies rdf:resource="&untitled-ontology;CS103"/>
+        <studies rdf:resource="&untitled-ontology;M202"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology;CSmodule"/>
+            <rdf:Description rdf:about="&untitled-ontology;Lecturer"/>
+            <rdf:Description rdf:about="&untitled-ontology;MathModule"/>
+            <rdf:Description rdf:about="&untitled-ontology;Student"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
